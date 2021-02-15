@@ -8,6 +8,17 @@ func main() {
 
 	fmt.Println(card)
 	fmt.Println(printState())
+
+	// Array -> fixed lenght
+	// Slice -> An array that can growth
+	cards := []string{"Five of Diadmonds", "Ace of Spades", newCard(), newCard()}
+	cards = append(cards, "Six of Spades") // creates a new Array (Inmutability)
+
+	fmt.Println(cards)
+
+	for index, card := range cards {
+		fmt.Println(index, card)
+	}
 }
 
 func newCard() string {
