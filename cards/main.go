@@ -11,10 +11,11 @@ func main() {
 
 	// Array -> fixed lenght
 	// Slice -> An array that can growth
-	cards := []string{"Five of Diadmonds", "Ace of Spades", newCard(), newCard()}
+	cards := deck{"Five of Diadmonds", "Ace of Spades", newCard(), newCard()}
 	cards = append(cards, "Six of Spades") // creates a new Array (Inmutability)
 
 	fmt.Println(cards)
+	cards.print()
 
 	for index, card := range cards {
 		fmt.Println(index, card)
@@ -23,4 +24,10 @@ func main() {
 
 func newCard() string {
 	return "Five of Diamonds"
+}
+
+type laptopSize float
+
+func (this laptopSize) get() {
+	return this
 }
