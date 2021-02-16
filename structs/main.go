@@ -13,5 +13,5 @@ func main() {
 		lastName:  "Giraldo", // order doesn't matter if attribute name is provided
 	}
 
-	fmt.Println(jp)
+	fmt.Printf("%+v", jp)
 }
