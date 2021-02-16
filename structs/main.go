@@ -14,4 +14,9 @@ func main() {
 	}
 
 	fmt.Printf("%+v", jp)
+
+	jp.firstName = "another"
+	jp.lastName = "person"
+
+	fmt.Printf("%+v", jp)
 }
